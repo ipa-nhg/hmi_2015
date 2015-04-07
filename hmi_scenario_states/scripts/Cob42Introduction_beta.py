@@ -244,8 +244,8 @@ class CobIntroduction(smach.State):
             folding_right_handle = sss.move("arm_right",["side", "reverse_folded", "side", "folded"], False)
             folding_left_handle = sss.move("arm_left",["side", "reverse_folded", "side", "folded"], False) 
             
-            sss.say(["As you can see, i have two agile arms. I can use them independently and thanks to sensors i am able to share the same workspace with humans."])
-            sss.say(["My arms and joints were developed in cooperation with Schunk Shounk Shoonk and follow the shape of human arms."])
+            sss.say(["As you can see, i have two agile arms. I can use them independently and thanks to sensors i am able to share the workspace with humans."])
+            sss.say(["My arms and joints were developed in cooperation with Schunk and follow the shape of human arms."])
             sss.say(["Both arms consist of 7 independent joints, allowing me to perform complex movements."])
 
             folding_right_handle.wait()
@@ -265,7 +265,7 @@ class CobIntroduction(smach.State):
             sss.move("gripper_right","closed")
             #sss.move("gripper_left","open")
             sss.say(["Combined with my 3D-Sensors i am able to recognize objects and manipulate or grab them from the floor or shelfs"], False)
-            sss.move("grupper_right","open")
+            sss.move("gripper_right","open")
             sss.move_base_rel("base",[0,0,0.3])
             sss.move("gripper_right","closed", False)
             #sss.move("gripper_left","closed")
